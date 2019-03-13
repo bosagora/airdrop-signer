@@ -29,6 +29,9 @@ ui_*.h
 Makefile*
 *build-*
 
+# Translation files
+*.qm
+
 # Qt unit tests
 target_wrapper.*
 
@@ -41,3 +44,6 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
+
+# Mac OSX
+.DS_Store
