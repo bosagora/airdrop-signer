@@ -35,7 +35,6 @@ SecretKey::getPublicKey() const
 // Addition to support a simple signing process
 int SecretKey::sign (std::string msg, unsigned char* result, unsigned long long& resultLength) const
 {
-    auto const ResMaxLength = crypto_sign_ed25519_BYTES + msg.length(); // length is always 40 in the case of this app
     return crypto_sign_ed25519(result, &resultLength,
                                reinterpret_cast<const unsigned char*>(msg.c_str()), msg.length(),
                                this->mSecretKey.data());
