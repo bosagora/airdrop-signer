@@ -43,6 +43,7 @@ FORMS += \
 
 TRANSLATIONS = bpfk_airdrop_signer.kr.ts
 
+QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 mac {
   PKG_CONFIG = /usr/local/bin/pkg-config
 }
