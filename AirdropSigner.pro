@@ -47,11 +47,13 @@ HEADERS += \
 FORMS += \
         src/mainwindow.ui
 
+# Note: Needs to be manually copied to BOSAgoraAirdropSigner.app/Contents/Resources/
 TRANSLATIONS = res/korean.ts
 
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 mac {
     PKG_CONFIG = /usr/local/bin/pkg-config
+    LIBS += -framework CoreFoundation
     ICON = res/BosAgora.icns
 }
 
