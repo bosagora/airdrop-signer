@@ -24,33 +24,44 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+MOC_DIR = bin
+OBJECTS_DIR = bin
+UI_DIR = src
+
+INCLUDEPATH += src
+
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    stellar/SecretKey.cpp \
-    stellar/StrKey.cpp \
-    stellar/crc16.cpp
+        src/main.cpp \
+        src/mainwindow.cpp \
+        src/stellar/SecretKey.cpp \
+        src/stellar/StrKey.cpp \
+        src/stellar/crc16.cpp
 
 HEADERS += \
-        mainwindow.h \
-    stellar/SecretKey.h \
-    stellar/ByteSlice.h \
-    stellar/StrKey.h \
-    stellar/crc16.h
+        src/mainwindow.h \
+        src/stellar/SecretKey.h \
+        src/stellar/ByteSlice.h \
+        src/stellar/StrKey.h \
+        src/stellar/crc16.h
 
 FORMS += \
-        mainwindow.ui
+        src/mainwindow.ui
 
-TRANSLATIONS = bpfk_airdrop_signer.kr.ts
+TRANSLATIONS = res/bpfk_airdrop_signer.kr.ts
 
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 mac {
-  PKG_CONFIG = /usr/local/bin/pkg-config
+    PKG_CONFIG = /usr/local/bin/pkg-config
+    ICON = res/BosAgora.icns
 }
 
-QT_CONFIG -= no-pkg-config
-CONFIG += link_pkgconfig
-PKGCONFIG += libsodium
+win32 {
+    LIBS += -L$$PWD/res/ -llibsodium-win-msvc
+} else {
+    QT_CONFIG -= no-pkg-config
+    CONFIG += link_pkgconfig
+    PKGCONFIG += libsodium
+}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
