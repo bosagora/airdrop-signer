@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = BPFKAirDropSigner
+TARGET = BOSAgoraAirdropSigner
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -47,7 +47,7 @@ HEADERS += \
 FORMS += \
         src/mainwindow.ui
 
-TRANSLATIONS = res/bpfk_airdrop_signer.kr.ts
+TRANSLATIONS = res/korean.ts
 
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 mac {
@@ -69,4 +69,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    bpfk_airdrop_signer.kr.ts
+    res/korean.ts

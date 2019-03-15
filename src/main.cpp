@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QTranslator myappTranslator;
-    myappTranslator.load("bpfk_airdrop_signer.kr.qm");
+    myappTranslator.load("korean.qm");
     a.installTranslator(&myappTranslator);
 
     MainWindow w;
