@@ -58,8 +58,8 @@ mac {
 }
 
 win32 {
-    INCLUDES += $$PWD/res/
-    LIBS += -L$$PWD/res/ -llibsodium
+    INCLUDES += $$PWD/res/sodium/include/
+    LIBS += -L$$PWD/res/sodium/ -lsodium
 } else {
     QT_CONFIG -= no-pkg-config
     CONFIG += link_pkgconfig
