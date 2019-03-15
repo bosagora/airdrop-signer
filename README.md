@@ -12,5 +12,25 @@ This application does not perform any network communication. We cannot see your 
 If you want, you can run this disconnected from the Internet.
 
 # Compilation
-You need to install the Qt toolsuite to compile this software.
-It has only been tested with Qt 5.12.1.
+
+First, you need to install the Qt toolsuite to compile this software.
+We recommend Qt 5.12.1, which we used for development.
+Open the project using Qt creator and follow the instructions according to your platform.
+
+## Windows
+
+You need to download [libsodium](https://libsodium.gitbook.io/doc/installation#pre-built-libraries)
+and install it under `res/sodium/.
+
+First, copy the `include` folder to `res/sodium/include/`.
+Second, install the dynamically built library.
+If you downloaded `libsodium-1.0.17-msvc` for example, copy everything under `x64/Release/vXXX/dynamic/`
+to `res/sodium/`. `vXXX` is defined by your MSVC version.
+
+## Mac OS
+
+Run `brew install pkg-config libsodium`.
+
+## Linux
+
+Make sure you have `pkg-config` and `libsodium` (or `libsodium-dev`) installed.

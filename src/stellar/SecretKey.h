@@ -5,8 +5,6 @@
 // of this distribution or at http://www.apache.org/licenses/LICENSE-2.0
 
 #include "stellar/ByteSlice.h"
-//#include "util/XDROperators.h"
-//#include "xdr/Stellar-types.h"
 
 #include <array>
 #include <functional>

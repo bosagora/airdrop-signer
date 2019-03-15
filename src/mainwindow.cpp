@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "stellar/SecretKey.h"
-#include <sodium.h>
 
 QString dataToQString(unsigned char* data, unsigned long long length)
 {
@@ -104,5 +103,3 @@ QString MainWindow::checkEthAddr()
         return tr("Ethereum address should be 40 hexadecimal (0-9/a-f/A-F) characters");
     return "";
 }
-
-

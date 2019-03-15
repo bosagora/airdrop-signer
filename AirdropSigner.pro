@@ -28,7 +28,7 @@ MOC_DIR = bin
 OBJECTS_DIR = bin
 UI_DIR = src
 
-INCLUDEPATH += src
+INCLUDEPATH += src res/sodium/include/
 
 SOURCES += \
         src/main.cpp \
@@ -58,7 +58,8 @@ mac {
 }
 
 win32 {
-    LIBS += -L$$PWD/res/ -llibsodium-win-msvc
+    INCLUDES += $$PWD/res/
+    LIBS += -L$$PWD/res/ -llibsodium
 } else {
     QT_CONFIG -= no-pkg-config
     CONFIG += link_pkgconfig
