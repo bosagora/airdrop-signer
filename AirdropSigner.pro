@@ -47,14 +47,15 @@ HEADERS += \
 FORMS += \
         src/mainwindow.ui
 
-# Note: Needs to be manually copied to BOSAgoraAirdropSigner.app/Contents/Resources/
-TRANSLATIONS = res/korean.ts
+# Note: Needs to be manually copied to BOSAGORAAirdropSigner.app/Contents/Resources/
+TRANSLATIONS += res/korean.ts
+OTHER_FILES  += res/korean.ts
 
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.7
 mac {
     PKG_CONFIG = /usr/local/bin/pkg-config
     LIBS += -framework CoreFoundation
-    ICON = res/BosAgora.icns
+    ICON = res/BOSAGORA.icns
 }
 
 win32 {
@@ -71,5 +72,3 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-OTHER_FILES += \
-    res/korean.ts
