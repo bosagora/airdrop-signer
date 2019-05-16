@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>BOSAgora Airdrop Signer</string>
+   <string>BOSAGORA Airdrop Signer</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
